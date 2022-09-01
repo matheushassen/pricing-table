@@ -1,0 +1,255 @@
+/*=================GENERAL=====================*/
+:root {
+    font-size: 62.5%; /* 1rem = 10px */
+    --yellow: #ffcc29;
+    --blue: #1d539e;
+    --gray: #828799;
+    --page-background: #f9fbfc;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    font-family: 'Open Sans';
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+  }
+
+.wrapper {
+    width: min(31.25rem, 100%);
+    margin-inline: auto;
+    padding-inline: 1.5rem;  
+}
+
+html::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    display: block;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.card.popular-plan {
+    height: 49rem;
+    padding: 0;
+}
+
+.card.popular-plan .card-title {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: var(--yellow);
+    border-radius: .8rem .8rem 0 0;
+    padding: 2.5rem;
+}
+
+.card.popular-plan .popular-sign {
+    padding: .8rem 2.4rem;
+
+    width: 9.4rem;
+    height: 3.2rem;
+
+    color: white;
+    background: #1D539E;
+    border-radius: 4rem;
+}
+
+.card.popular-plan .card-title p{
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+}
+
+.card.popular-plan .card-subtitle {
+    padding: 0 3rem;
+}
+
+.card.popular-plan .card-body{
+    padding: 3rem;
+}
+
+.card.popular-plan .card-plan-advantages {
+    margin-top: 0;
+}
+
+
+/*=================HEADER=====================*/
+
+header {
+    color: white;
+    text-align: center;
+    margin-bottom: 6.5rem;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 6.5rem;
+}
+
+header h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+/*=================CARDS=====================*/
+
+section .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+section .card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 1px 2px rgba(142, 150, 185, 0.25);
+    border-radius: .8rem;
+    height: 47rem;
+    padding: 3rem;
+}
+
+
+.card-subtitle h1 {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 4.9rem;
+    margin-top: 2rem;
+}
+
+.card-subtitle span {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: var(--gray);
+}
+
+.card-subtitle .cents {
+    font-weight: 700;
+    color: black;
+}
+
+.card-subtitle h2 {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    margin: 1rem 0rem 2rem 0rem;
+    color: #828799;
+}
+
+.card-title p {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+.card-subtitle::after {
+    content: "";
+    width: 23rem;
+    background-color: #EEEEEE;
+    height: .1rem;
+    position: absolute;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-plan-advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color: var(--gray);
+    margin-top: 2rem;
+}
+
+.card-plan-advantages p {
+    display: flex;
+    gap: 1rem;
+}
+
+.card-button {
+    padding: 1.2rem 2.4rem;
+    gap: 10px;
+
+    width: 100%;
+    height: 4.9rem;
+
+    font-weight: 600;
+    color: var(--blue);
+    background-color: white;
+    border: 1px solid var(--blue);
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: var(--blue);
+    color: white;    
+}
+
+@media (min-width: 1024px) {
+
+    .wrapper {
+        width: min(140rem, 100%);
+        margin-inline: auto;
+        padding-inline: 1.5rem;  
+    }
+
+    html::before {
+        height: 50%;
+    }
+
+    header {
+        color: white;
+        margin-bottom: 6.5rem;
+        margin-top: 10rem;
+    }
+    
+    header h1 {
+        font-weight: 700;
+        font-size: 4.8rem;
+        line-height: 6.5rem;
+    }
+    
+    header h2 {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    section .cards {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section .card {
+        width: 35.5rem;
+    }
+
+    .card-subtitle::after {
+        content: "";
+        width: 29rem;
+        background-color: #EEEEEE;
+        height: .1rem;
+        position: absolute;
+    }
+
+}
